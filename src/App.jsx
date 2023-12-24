@@ -5,6 +5,7 @@ import Student from "./components/Student";
 import UserGreeting from "./components/UserGreeting";
 import List from "./assets/List";
 import ReUseList from "./components/ReuseList";
+import ButtonClick from "./components/ButtonClick";
 
 function App() {
   const fruits = [
@@ -23,6 +24,7 @@ function App() {
   ];
   return (
     <>
+      <ButtonClick />
       <Card />
       <Student name="Bala" age={23} isMarried={false} />
       <Student name="Gopinaath" age={28} isMarried={true} />
