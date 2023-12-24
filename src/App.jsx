@@ -3,8 +3,24 @@ import Card from "./components/Card";
 import Button from "./components/button/Button";
 import Student from "./components/Student";
 import UserGreeting from "./components/UserGreeting";
+import List from "./assets/List";
+import ReUseList from "./components/ReuseList";
 
 function App() {
+  const fruits = [
+    { id: 1, name: "apple", calories: 95 },
+    { id: 2, name: "banana", calories: 45 },
+    { id: 3, name: "coconut", calories: 105 },
+    { id: 4, name: "pine apple", calories: 159 },
+    { id: 5, name: "orange", calories: 37 },
+  ];
+  const vegetables = [
+    { id: 1, name: "Beetroot", calories: 95 },
+    { id: 2, name: "Carrot", calories: 45 },
+    { id: 3, name: "White radish", calories: 105 },
+    { id: 4, name: "Celeriac", calories: 159 },
+    { id: 5, name: "Sugar beet", calories: 37 },
+  ];
   return (
     <>
       <Card />
@@ -15,6 +31,12 @@ function App() {
       <UserGreeting isLogin={false} userName="Gopi" />
       <UserGreeting isLogin={true} />
       <Button />
+      <List />
+      <hr></hr>
+      {fruits.length > 0 && <ReUseList items={fruits} category="Fruits" />}
+      {vegetables.length > 0 ? (
+        <ReUseList items={vegetables} category="Vegetables" />
+      ) : null}
     </>
   );
 }
