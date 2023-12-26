@@ -6,6 +6,11 @@ import UserGreeting from "./components/UserGreeting";
 import List from "./assets/List";
 import ReUseList from "./components/ReuseList";
 import ButtonClick from "./components/ButtonClick";
+import CounterState from "./components/CounterState";
+import ChangeEvents from "./components/ChangeEvents";
+import ObjectState from "./components/ObjectState";
+import ArrayState from "./components/ArrayState";
+import ArrayObjects from "./components/ArrayObjects";
 
 function App() {
   const fruits = [
@@ -24,8 +29,13 @@ function App() {
   ];
   return (
     <>
+      <ArrayObjects />
+      <ArrayState />
+      <ObjectState />
       <ButtonClick />
       <Card />
+      <ChangeEvents />
+      <CounterState />
       <Student name="Bala" age={23} isMarried={false} />
       <Student name="Gopinaath" age={28} isMarried={true} />
       <Student />
